@@ -20,7 +20,8 @@ public:
 
 private:
     Model *model;
-    void updateView();
     Ui::MainWindow *ui;
+    void updateView();
+    int updateCount = 0;
 };
 #endif // MAINWINDOW_H

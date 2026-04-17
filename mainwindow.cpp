@@ -48,4 +48,7 @@ void MainWindow::updateView()
     ui->spinBoxC->setValue(model->getC());
     ui->sliderC->setValue(model->getC());
     ui->lineEditC->setText(QString::number(model->getC()));
+
+    updateCount++;
+    ui->labelCounter->setText(QString::number(updateCount));
 }
