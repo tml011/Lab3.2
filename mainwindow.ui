@@ -13,14 +13,44 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">/* Делаем слайдеры посимпатичнее */
+QSlider::handle:horizontal {
+    background: rgb(31, 154, 93);
+    border: 1px solid rgb(21, 104, 62);
+    width: 15px;
+    height: 18px;
+    margin: -6px 0;
+    border-radius: 9px;
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid #bbb;
+    background: white;
+    height: 4px;
+    border-radius: 2px;
+}
+
+/* Выделяем SpinBox и LineEdit */
+QSpinBox, QLineEdit {
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 3px;
+    selection-background-color: #2196F3;
+}
+
+QSpinBox:focus, QLineEdit:focus {
+    border: 2px solid #2196F3;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLineEdit" name="lineEditA">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>285</y>
-      <width>113</width>
-      <height>25</height>
+      <x>110</x>
+      <y>290</y>
+      <width>80</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -33,10 +63,10 @@
    <widget class="QSpinBox" name="spinBoxA">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>335</y>
+      <x>120</x>
+      <y>350</y>
       <width>60</width>
-      <height>25</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -52,8 +82,8 @@
    <widget class="QSlider" name="sliderA">
     <property name="geometry">
      <rect>
-      <x>100</x>
-      <y>385</y>
+      <x>80</x>
+      <y>400</y>
       <width>160</width>
       <height>25</height>
      </rect>
@@ -68,10 +98,10 @@
    <widget class="QSpinBox" name="spinBoxB">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>335</y>
+      <x>350</x>
+      <y>350</y>
       <width>60</width>
-      <height>25</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -87,8 +117,8 @@
    <widget class="QSlider" name="sliderB">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>385</y>
+      <x>310</x>
+      <y>400</y>
       <width>160</width>
       <height>25</height>
      </rect>
@@ -103,10 +133,10 @@
    <widget class="QLineEdit" name="lineEditB">
     <property name="geometry">
      <rect>
-      <x>330</x>
-      <y>285</y>
-      <width>113</width>
-      <height>25</height>
+      <x>340</x>
+      <y>290</y>
+      <width>80</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -119,10 +149,10 @@
    <widget class="QSpinBox" name="spinBoxC">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>335</y>
+      <x>590</x>
+      <y>350</y>
       <width>60</width>
-      <height>25</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -138,8 +168,8 @@
    <widget class="QSlider" name="sliderC">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>385</y>
+      <x>545</x>
+      <y>400</y>
       <width>160</width>
       <height>25</height>
      </rect>
@@ -154,10 +184,10 @@
    <widget class="QLineEdit" name="lineEditC">
     <property name="geometry">
      <rect>
-      <x>550</x>
-      <y>285</y>
-      <width>113</width>
-      <height>25</height>
+      <x>580</x>
+      <y>290</y>
+      <width>80</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -167,18 +197,19 @@
      </font>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="labelA">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>120</y>
-      <width>111</width>
+      <x>110</x>
+      <y>140</y>
+      <width>81</width>
       <height>111</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>72</pointsize>
+      <family>HONOR Sans Text GBK</family>
+      <pointsize>68</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -186,18 +217,19 @@
      <string>A</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="labelB">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>120</y>
-      <width>121</width>
+      <x>350</x>
+      <y>140</y>
+      <width>71</width>
       <height>111</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>72</pointsize>
+      <family>HONOR Sans Text GBK</family>
+      <pointsize>68</pointsize>
       <bold>false</bold>
      </font>
     </property>
@@ -205,23 +237,64 @@
      <string>B</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="labelC">
     <property name="geometry">
      <rect>
       <x>570</x>
-      <y>120</y>
-      <width>121</width>
+      <y>140</y>
+      <width>81</width>
       <height>111</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>72</pointsize>
+      <family>HONOR Sans Text GBK</family>
+      <pointsize>68</pointsize>
       <bold>false</bold>
      </font>
     </property>
     <property name="text">
      <string>C</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>140</y>
+      <width>100</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HONOR Sans Text GBK</family>
+      <pointsize>50</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>≤</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label1">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>140</y>
+      <width>100</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>HONOR Sans Text GBK</family>
+      <pointsize>50</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>≤</string>
     </property>
    </widget>
   </widget>
