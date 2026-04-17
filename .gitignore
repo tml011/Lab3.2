@@ -1,0 +1,42 @@
+# Qt Creator временные файлы
+*.autosave
+*.user
+*.user.*
+
+# Сборка CMake
+CMakeLists.txt.user*
+build-*/
+build*/
+
+# Сборка QMake
+Makefile*
+*.qmake.cache
+*.qmake.stash
+*.pro.user
+*.pro.user.*
+
+# Объектные файлы и библиотеки
+*.o
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.lai
+*.la
+*.lo
+
+# Qt файлы ресурсов
+*.qmlc
+*.jsc
+ui_*.h
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+*.qm
+*.prl
+
+# Прочее
+.DS_Store
+.directory
+*~
