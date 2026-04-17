@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "model.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -18,6 +19,8 @@ public:
     ~MainWindow() override;
 
 private:
+    Model *model;
+    void updateView();
     Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
